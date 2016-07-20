@@ -389,7 +389,7 @@
                                                                                                         },{
                                                                            label: "Industry Use Cases",
                                                                            collapse: "1",
-                                                                           url: "http://ddp1.mybluemix.net/menu.html",
+                                                                           url: "http://ddpbdre.azurewebsites.net/menu.html",
                                                                            children: []
                                                                                                          }
                                                 ]

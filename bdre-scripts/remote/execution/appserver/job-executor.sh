@@ -31,21 +31,21 @@ echo "busDomainId=$1 , processTypeId=$2 , processId=$3 userName=$4"
 if [ $processTypeId -eq 1 ]; then
     ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/flume.sh $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 2 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 4 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 5 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 18 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 19 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 28 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 elif [ $processTypeId -eq 26 ]; then
     ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/filemonitor.sh $processId $userName
 elif [ $processTypeId -eq 39 ]; then
-    ssh $EDGE_NODE_URL sh $BDRE_REMOTE_EXECUTION_DIR/workflow.sh $busDomainId $processTypeId $processId
+    ssh $EDGE_NODE_URL python $BDRE_REMOTE_EXECUTION_DIR/Workflow.py $busDomainId $processTypeId $processId
 
 else
     echo "Don't know how to execute busDomainId=$1 , processTypeId=$2 , processId=$3 by userName=$4"
