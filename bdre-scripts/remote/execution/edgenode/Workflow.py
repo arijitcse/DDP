@@ -1,13 +1,15 @@
-mport urllib2
+#!/usr/bin/env python
+import urllib2
 import json
 import os
 import sys
 import commands
 import time
 import subprocess
+import env
 BDRE_HOME = '~/bdre'
 BDRE_APPS_HOME = '~/bdre_apps'
-OOZIE_URL = $oozieUrl
+OOZIE_URL = env.oozieUrl
 output = commands.getstatusoutput('oozie job -run -config ' + BDRE_APPS_HOME + '/'+sys.argv[1]+'/'+sys.argv[2]+'/'+sys.argv[3]+'/job-' + sys.argv[3] + '.properties -oozie ' + OOZIE_URL)
 print output
 jobidstring = output[1]
